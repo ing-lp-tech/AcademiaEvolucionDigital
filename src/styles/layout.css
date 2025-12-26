@@ -1,0 +1,87 @@
+/* Layout Styles */
+
+.navbar {
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--surface);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.nav-brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-muted);
+    background-color: var(--surface);
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+/* Page Grids */
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .nav-menu {
+        gap: 0.5rem;
+    }
+
+    .nav-menu .btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    /* Hide certain elements on very small screens if needed, or stack them */
+    /* For now, we prefer wrapping or shrinking */
+
+    .main-content {
+        padding: 1rem;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+        /* Stack sidebar below video */
+    }
+}

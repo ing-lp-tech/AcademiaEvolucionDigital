@@ -1,0 +1,179 @@
+/* Executive Component Styles */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem 1.25rem;
+    /* Slightly reduced padding for tighter look */
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    border: 1px solid transparent;
+    /* Explicit border for alignment */
+    font-size: 0.9rem;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    gap: 0.5rem;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    /* Formal touch */
+    font-size: 0.8rem;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    /* Subtle shadow */
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-hover);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+}
+
+.btn-outline:hover {
+    background-color: var(--background);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-ghost {
+    background-color: transparent;
+    color: var(--text-muted);
+}
+
+.btn-ghost:hover {
+    color: var(--primary);
+    background-color: var(--surface-alt);
+}
+
+.input {
+    width: 100%;
+    padding: 0.625rem 0.875rem;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    color: var(--text);
+    font-size: 0.95rem;
+    transition: all var(--transition-fast);
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    /* Subtle input shadow */
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+    /* Blue glow ring */
+}
+
+.card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    transition: all var(--transition-normal);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    /* Minimalist shadow */
+}
+
+.card:hover {
+    border-color: var(--border-focus);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.375rem;
+    color: var(--text);
+    font-weight: 500;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.auth-container {
+    max-width: 400px;
+    margin: 4rem auto;
+    padding: 2rem;
+}
+
+.role-selector {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.role-card {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    text-align: center;
+    cursor: pointer;
+    background: var(--surface);
+    transition: all var(--transition-fast);
+    color: var(--text-muted);
+}
+
+.role-card.selected {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: white;
+}
+
+.grid-responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+    .auth-container {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+    }
+
+    .title {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .grid-responsive {
+        grid-template-columns: 1fr;
+        /* Stack on mobile */
+    }
+}

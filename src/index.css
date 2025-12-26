@@ -1,0 +1,80 @@
+:root {
+  /* Dark/Blue Palette - "Academia Evolucion Digital" */
+  --primary: #2563eb;
+  /* Strong Blue */
+  --primary-hover: #1d4ed8;
+  --secondary: #10b981;
+  /* Emerald for success/calls to action */
+
+  --background: #020617;
+  /* Very Dark Blue/Black (Slate 950) */
+  --surface: #0f172a;
+  /* Dark Blue (Slate 900) */
+  --surface-alt: #1e293b;
+  /* Lighter Slate 800 */
+
+  --text: #f8fafc;
+  /* White/Light Gray */
+  --text-muted: #94a3b8;
+  /* Muted Slate */
+
+  --border: #1e293b;
+  /* Dark border */
+  --border-focus: #3b82f6;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-full: 9999px;
+
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--surface-alt);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
