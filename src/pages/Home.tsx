@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
 
 export const Home = () => {
     return (
         <div style={{ textAlign: 'center', padding: '4rem 1rem' }}>
+            <SEO
+                title="Aprende y Enseña Online"
+                description="La mejor plataforma educativa para aprender nuevas habilidades o monetizar, tu conocimiento. Cursos de alta calidad para estudiantes y herramientas potentes para profesores."
+                keywords="cursos online, plataforma educativa, dar clases online, monetizar cursos, academia digital, aprender programacion, cursos de marketing"
+            />
             <h1 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '1.5rem', background: 'linear-gradient(to right, #818cf8, #34d399)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                 Aprende Sin Límites
             </h1>
